@@ -15,6 +15,10 @@
         color: #0000;
         background-clip: text; 
     }
+    .lightning:hover{
+        background-image: url("../lib/images/lightning.gif"); 
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px;
+    }
     
     @keyframes in{
         from {opacity: 0;}
@@ -27,15 +31,13 @@
 </style>
 <div class="min-h-screen h-full  pt-15 " >
         <section class="flex justify-start "> 
-            <img src="https://supabase.com/_next/image?url=%2Fimages%2Flaunchweek%2F8%2FLW8-gradient.png&w=3840&q=75" alt="null"
-            class="absolute inset-0 w-full h-full">
             <article class=" flex flex-col mt-32 ml-20 items-center">
                 <h1 class="text-6xl text-white font-bold m-2 lol">Learn Web-dev</h1>
                 <span class="text-6xl font-bold text-gray-300 m-2 lol">Faster and
                     <em class="gradient group">
                         Funner.
                         <span class="absolute scale-0 group-hover:scale-100 bg-slate-900 rounded-lg border border-slate-600 text-white
-                        font-semibold p-2 m-2 text-lg left-1/3 top-1/2 transition duration-400 origin-bottom ">
+                        font-semibold p-2 m-2 text-lg left-1/3 top-1/2 transition duration-400 origin-bottom delay-100 ">
                             funner is a word
                         </span>        
                     </em>
@@ -50,17 +52,19 @@
                 </a>
             </article>
         </section>  
-        <section>
-            <article>
-                <h3>⚡Interactive</h3>
-                <p>
+        <section class="flex justify-around">
+            <article class="flex flex-col   p-5 rounded-lg     
+              w-1/3 lol m-10 lightning justify-center">
+                <h3 class="text-white text-3xl font-semibold m-1 ">⚡Interactive</h3>
+                <p class="text-gray-300 text-md">
                     You shouldn't spend hours watching tutorials or thousands of dollars on bootcamps. You just need to, ACTUALLY CODE.
-                    We(nexTutorial) provide an interactive tutorial where you can actively learn React. Powered by Stackblitz. 
+                    We(nexTutorial) provide an interactive tutorial where you can actively learn React. 
                 </p>
             </article>
-            <article>
-                <h3>Fun</h3>
-                <p>
+            <article class="flex flex-col     
+            transition duration-300 w-1/3 lol m-10 p-5 justify-center">
+                <h3 class="text-white text-3xl font-semibold m-1 ">Fun</h3>
+                <p  class="text-gray-300 text-md">
                     Our free courses follow a linear stucture. Each lesson having a corresponding short video to explain the concepts
                     visually. Check out the <a href="/games">games</a>.
                 </p>

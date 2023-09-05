@@ -26,13 +26,13 @@
 </style>
 <div class="font-sans "> 
     <header class="min-w-screen w-full    flex items-center text-2xl px-5 bg-slate-900" >
-        <div class="flex items-center  basis-1/2">
-            <a href="/" class="flex">
+        <a href="/" class="flex items-center  basis-1/2">
+            <div  class="flex">
                 <img src={Reac} alt="logo1" width="75px">
                 <img src={Nex} alt="logo2" width="75px">
-            </a>    
+            </div>    
             <span class="gradient font-extrabold text-4xl">nexTutorial</span>
-        </div>
+        </a>
         <nav class="basis-1/2 flex justify-end items-center">
             <a href="/react" class="p-0 m-2 text-gray-300 font-bold text-xl hover:text-white      ">
                 React
@@ -47,16 +47,22 @@
             <a href="/blog" class="p-0 m-2      text-gray-300 font-bold text-xl hover:text-white ">
                 controversialOpinions
             </a>
+            <hr class="h-[6px] rounded-full w-[6px] flex bg-gray-300 border-none items-center mx-[6px] ">
+            <a href="/login" class="p-2 m-2 text-gray-900 font-bold text-xl hover:bg-white border  rounded bg-gray-300
+            border-gray-500 transition duration-200">
+                LOGIN
+            </a>
             <a href="https://github.com/zesk6/nexTutorial" class="p-0 m-2      ">
                 <img src={Github} alt="github" class="w-[30px]">
             </a>
+
         </nav>
     </header>
     <main>
         <slot />
     </main>
     <footer class="flex flex-col items-center ">
-        <div class="rounded-full w-60  h-1 linear m-5  "></div>
+        <hr class="rounded-full w-60  h-1 linear m-5  ">
         <a class="flex items-center m-3" href="/">
             <div class="flex">
                 <img src={Reac} alt="logo1" width="75px">
