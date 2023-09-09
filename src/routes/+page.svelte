@@ -66,7 +66,7 @@
                 <h3 class="text-white text-3xl font-semibold m-1 ">Fun</h3>
                 <p  class="text-gray-300 text-md">
                     Our free courses follow a linear stucture. Each lesson having a corresponding short video to explain the concepts
-                    visually. Check out the <a href="/games">games</a>.
+                    visually. Also, check out the <a href="/games" class="text-blue-500 underline">games</a>.
                 </p>
             </article>
         </section> 

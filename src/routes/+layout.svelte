@@ -5,6 +5,9 @@
     import '../app.css' 
     import YoutubeLogo from '$lib/images/youtubeLogo.svg'
     import RedditLogo from '$lib/images/redditlogo.svg'
+    import { user, userData } from '$lib/stores'
+
+    
 
 
 
@@ -20,12 +23,14 @@
         background-image: linear-gradient(to right, #3db7c2, #333333 );
 
     }
-
+    .op{
+        opacity: 0.7;
+    }
 
 
 </style>
 <div class="font-sans "> 
-    <header class="min-w-screen w-full    flex items-center text-2xl px-5 bg-slate-900" >
+    <nav class="min-w-screen w-full    flex items-center text-2xl px-5 bg-slate-900" >
         <a href="/" class="flex items-center  basis-1/2">
             <div  class="flex">
                 <img src={Reac} alt="logo1" width="75px">
@@ -34,10 +39,10 @@
             <span class="gradient font-extrabold text-4xl">nexTutorial</span>
         </a>
         <nav class="basis-1/2 flex justify-end items-center">
-            <a href="/react" class="p-0 m-2 text-gray-300 font-bold text-xl hover:text-white      ">
+            <a href="/courses/react" class="p-0 m-2 text-gray-300 font-bold text-xl hover:text-white      ">
                 React
             </a>
-            <a href="/next" class="p-0 m-2   text-gray-300 font-bold text-xl hover:text-white    ">
+            <a href="/courses/next" class="p-0 m-2   text-gray-300 font-bold text-xl hover:text-white    ">
                 Next
             </a>
             <hr class="h-[6px] rounded-full w-[6px] flex bg-gray-300 border-none items-center mx-[6px] ">
@@ -48,16 +53,26 @@
                 controversialOpinions
             </a>
             <hr class="h-[6px] rounded-full w-[6px] flex bg-gray-300 border-none items-center mx-[6px] ">
-            <a href="/login" class="p-2 m-2 text-gray-900 font-bold text-xl hover:bg-white border  rounded bg-gray-300
-            border-gray-500 transition duration-200">
-                LOGIN
-            </a>
+            {#if $user}
+                <div class="flex items-center m-2">
+                    <img src={$user.photoURL} alt="profile pic" class="rounded-full w-12 ">
+                    <span class="bg-green-600 p-[2px] text-white font-bold rounded-full text-sm absolute top-3 right-14
+                    op">
+                        {$userData?.xp ?? 0} XP
+                    </span>
+                </div>
+            {:else}
+                <a href="/login" class="p-2 m-2 text-gray-900 font-bold text-xl hover:bg-white border  rounded bg-gray-300
+                border-gray-500 transition duration-200">
+                    LOGIN
+                </a>
+            {/if}
             <a href="https://github.com/zesk6/nexTutorial" class="p-0 m-2      ">
                 <img src={Github} alt="github" class="w-[30px]">
             </a>
 
         </nav>
-    </header>
+    </nav>
     <main>
         <slot />
     </main>

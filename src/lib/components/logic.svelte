@@ -15,6 +15,7 @@
             email: user.email,
             courses: [],
             xp: 0,
+            profilePic: user.photoURL
         })
         await batch.commit()
         
